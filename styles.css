@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@font-face {
+    font-family: 'Digital7';
+    src: url('assets/fonts/digital-7.ttf') format('truetype');
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #01161E;
+    color: #EAF4F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 20px;
+}
+
+.calculator{
+    width: 350px;
+    height: 550px;  
+    margin: 0;
+    background-color: #022932;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.display{
+    grid-row: 1;
+    background-color: #01161E;
+    padding: 40px 20px 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.display input {
+    width: 100%;
+    height: 50px;
+    background-color: #01161E;
+    border: none;
+    outline: none;
+    font-family: 'Digital7', sans-serif;
+    font-size: 3em;
+    text-align: right;
+    color: #00ff00;
+    box-sizing: border-box;
+}
+
+button{
+    font-family: "Nunito", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.3rem;
+    cursor: pointer;    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 2px 5px #013844, -2px -2px 5px #044A56;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #022932; 
+    color: #EAF4F4; 
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background-color: #033D47;
+    box-shadow: 2px 2px 5px #013844, -2px -2px 5px #044A56;
+}
+button:active {
+    transform: translateY(1px); /* Simula presión */
+    background-color: #013844;
+    box-shadow: 0px 1px 2px 0px #ccc;
+}
+
+.buttons{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 3fr 1fr; /* 3 partes para los números, 1 parte para los operadores */
+    height: 310px;
+    padding: 20px;
+    gap: 30px;  
+}
+
+.btn-clear {
+    grid-column: span 2; /* Ocupa ambas columnas */
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.btn-clear button {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    background-color: #022932;
+    color: #EAF4F4;
+    border: none;
+    box-shadow: 2px 2px 5px #013844, -2px -2px 5px #044A56;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.btn-clear button:hover {
+    transform: translateY(-2px);
+    background-color: #044A56;
+    box-shadow: 2px 2px 5px #013844, -2px -2px 5px #044A56;
+}
+.btn-clear button:active {
+    transform: translateY(1px); /* Simula presión */
+    background-color: #013844;
+    box-shadow: 0px 1px 2px 0px #ccc;
+}
+
+#ac{
+    background-color: #d63031;
+}
+
+.btn-numbers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+}    
+.btn-number-zero{
+    grid-column: 1/3;
+    width: auto;
+    /* height: auto; */
+    border-radius: 20px;
+}
+
+.btn-operators{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50px;
+}
+
+
+/* credits */
+
+.credits-container {
+    /* width: 100%; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.credits {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    padding: 25px;
+    margin: 20px;
+    text-align: center;
+    color: #eee;
+    transition: transform 0.2s ease-in-out, box-shadow 0.5s ease;
+}
+
+.credits:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0px 4px 15px rgba(241, 68, 218, 0.3); /* Agrega un efecto de sombra */
+}
+
+.credits p {
+    padding-bottom: 5px;
+}
+.credits a {
+    color: #eee;
+    text-decoration: none;
+}
+.credits a:hover {
+    text-decoration: underline;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
